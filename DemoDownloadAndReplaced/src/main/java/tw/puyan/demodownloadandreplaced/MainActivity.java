@@ -38,7 +38,12 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View view) {
                 DownloadTask task=new DownloadTask();
-                task.execute("http://220.135.205.124:8080/share.cgi?ssid=08Au2j8");
+
+                //You should build .apk by master branch using your key (auto-generated debug key is OK,must same as this build)
+                //then upload the build to a access-able url like mine
+                //and replace correct url of your own blow
+                //puyan 2013.09.27
+                task.execute("http://site.puyan.idv.tw:8080/share.cgi?ssid=08Au2j8");
             }
         });
 
@@ -59,7 +64,7 @@ public class MainActivity extends Activity {
         protected void onPreExecute() {
             super.onPreExecute();
             mProgressDialog=new ProgressDialog(MainActivity.this, AlertDialog.THEME_HOLO_LIGHT);
-            mProgressDialog.setMessage("A message");
+            mProgressDialog.setMessage("Download update...");
             mProgressDialog.setIndeterminate(true);
             mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
             mProgressDialog.setCancelable(true);
