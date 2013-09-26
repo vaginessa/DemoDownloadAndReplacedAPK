@@ -4,5 +4,7 @@
     <string name="app_name">DemoDownloadAndReplaced</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string name="could_not_say_hello">I can\'t say hello before you update me</string>
+    <string name="Update">Update</string>
 
 </resources>
